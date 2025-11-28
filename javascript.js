@@ -9,4 +9,10 @@ function getComputerChoice() {
     }
 }
 
+function getHumanChoice(){
+    //assuming the input is always valid here
+    return prompt("Please enter Rock Paper or Scissors");
+}
+
 console.log(getComputerChoice());
+console.log(getHumanChoice());
