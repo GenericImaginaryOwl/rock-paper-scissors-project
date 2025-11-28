@@ -12,8 +12,9 @@ function getComputerChoice() {
 }
 
 function getHumanChoice(){
-    //assuming the input is always valid here
-    return prompt("Please enter Rock Paper or Scissors");
+    //assuming the input is almost always valid here
+    humanInput = prompt("Please enter Rock Paper or Scissors");
+    return humanInput.toLowerCase().replace(humanInput.charAt(0), humanInput.charAt(0).toUpperCase());
 }
 
 function playRound(humanChoice, computerChoice) {
@@ -33,9 +34,8 @@ function playRound(humanChoice, computerChoice) {
         console.log(`You lost this round: ${humanChoice} is beaten by ${computerChoice}.`)
         computerScore +=1;
     }
-    
-    
 }
+
 playRound(getHumanChoice(), getComputerChoice());
 
 //console.log(getComputerChoice());
